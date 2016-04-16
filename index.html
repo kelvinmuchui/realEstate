@@ -1,47 +1,73 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-<script language="javascript" type="text/javascript">
-var timerid = 0;
-var images = new Array(	"image1.jpg",
-			"image2.jpg",
-			"image3.jpg");
-var countimages = 0;
-function startTime()
-{
-	if(timerid)
-	{
-		timerid = 0;
-	}
-	var tDate = new Date();
-	
-	if(countimages == images.length)
-	{
-		countimages = 0;
-	}
-	if(tDate.getSeconds() % 5 == 0)
-	{
-		document.getElementById("img1").src = images[countimages];
-	}
-	countimages++;
-	
-	timerid = setTimeout("startTime()", 1000);
-}
-</script>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body onload="startTime();">
-    <header>
-<img id="img1" src="image3.jpg" style="width:100%" />
-        </header>
-	<div class="cd-intro-block">
-		<div class="content-wrapper">
-			<h1>Squeezebox Portfolio Template</h1>
-			<a href="#0" class='cd-btn' data-action="show-projects">Show projects</a>
-		</div>
-	</div> <!-- .cd-intro-block -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>kelvin muchui</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="CSS-only Responsive Layout with Smooth Transitions" />
+        <meta name="keywords" content="css3, transitions, animations, css-only, navigation, smooth scrolling, full width, full height, window width, window height" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+		<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="js/modernizr.custom.79639.js"></script> 
+    </head>
+    <body>
+        <div class="container">
+			
+			<div class="st-container">
+			
+				<input type="radio" name="radio-set" checked="checked" id="st-control-1"/>
+				<a href="#st-panel-1">Home</a>
+				<input type="radio" name="radio-set" id="st-control-2"/>
+				<a href="#st-panel-2">About</a>
+				<input type="radio" name="radio-set" id="st-control-3"/>
+				<a href="#st-panel-3">Portfolio</a>
+				<input type="radio" name="radio-set" id="st-control-4"/>
+				<a href="#st-panel-4">Blog</a>
+				<input type="radio" name="radio-set" id="st-control-5"/>
+				<a href="#st-panel-5">Contact me</a>
+				
+				<div class="st-scroll">
+					
+					<section class="st-panel" id="st-panel-1">
+						
+						<h2>kelvin muchui</h2>
+						<p>Am a web developer and designer</p>
+					</section>
+					
+					<section class="st-panel st-color" id="st-panel-2">
+						
+						<h2>About me</h2>
+						<p><ul>
+                        <li>HTML</li>
+                        <li>HTML</li>
+                        </ul>
+                        </p>
+                        
+					</section>
+					
+					<section class="st-panel" id="st-panel-3">
+						<h2>portfolio</h2>
+						<p></p>
+					</section>
+					
+					<section class="st-panel st-color" id="st-panel-4">
+						<h2>blog</h2>
+						<p></p>
+					</section>
+					
+					<section class="st-panel" id="st-panel-5">
+						<h2>Contact</h2>
+						<p></p>
+					</section>
 
-</body>
+				</div>
+				
+			</div>
+			
+        </div>
+	</body>
 </html>
