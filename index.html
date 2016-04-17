@@ -13,6 +13,24 @@
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/home.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+    var content = $('.content');
+
+    $('#trigger').live('click', function() {
+        $(this).toggle(function() {
+            $(this).text('hide follow!');
+            content.removeClass('reverse').addClass('running');
+        }, function() {
+             $(this).text('follow me!');
+            content.removeClass('running').addClass('reverse');
+        }).trigger('click');
+    });
+
+});
+</script>
+<link rel="canonical" href="http://www.alessioatzeni.com/wp-content/tutorials/html-css/CSS3-Reverse-Animation/index.html" />
 		<script type="text/javascript" src="js/modernizr.custom.79639.js"></script> 
     </head>
     <body>
@@ -35,6 +53,7 @@
 					
 					<section class="st-panel" id="st-panel-1">
 						<div class="ID-Image">
+
   <ul id="follow">
      <li class="line1">
      <span id="layerBall" class="ball">LINKED IN</span><span id="layerPulse" class="pulse"></span>
